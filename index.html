@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Incremental Test</title>
-</head>
-<body>
-    <p id="currency-counter">Currency: 0</p>
-    <button onclick="currencyTick()">Acquire Currency</button>
+  </head>
+  <body>
+    <div id="Tabs">
+      <button id="pTab" onClick="tab('Past')" style="background:transparent; border:none; color:transparent;" disabled="true">Past</button>
+      <button id="prTab"onClick="tab('Present')" style="background:transparent; border:none; color:transparent;" disabled="true">Present</button>
+      <button id="fTab" onClick="tab('Future')" style="background:transparent; border:none; color:transparent;" disabled="true">Future</button>
+    </div>
+    
+    <div id="Past">
+      
+    </div>
+    
+    <div id="Present">
+    <p id="currencyCounter">Currency: 0</p>
+    <button id="currencyButton" onclick="currencyTick()">Acquire Currency</button>
+    <button onclick="clickUpgrade()" id="clickUpgrade">
+      Upgrade Click Power (Currently: 1) (Price: 10)
+    </button>
+    <button onclick="priceUpgrade()" id="priceUpgrade">
+      Decrease Previous Upgrade Cost (Currently: 1) (Price: 1000)
+    </button>
+    <button onclick="automateUpgrade()" id="automateUpgrade">
+      Automate Clicking (Price: 10000)
+    </button>
+    <button onClick="timeUnlock()" id="timeUnlock" style="background:transparent; border:none; color:transparent;" disabled="true">Make a Pun</button>
+    </div>
+    
+    <div id="Future">
+      <p id="fCurrencyCounter">Currency: 0</p>
+    <button id="fCurrencyButton" onclick="currencyTick()">Acquire Currency</button>
+    <button onclick="clickUpgrade()" id="fClickUpgrade">
+      Upgrade Click Power (Currently: 1) (Price: 10)
+    </button>
+    <button onclick="priceUpgrade()" id="fPriceUpgrade">
+      Decrease Previous Upgrade Cost (Currently: 1) (Price: 1000)
+    </button>
+    <button onclick="automateUpgrade()" id="fAutomateUpgrade">
+      Automate Clicking (Price: 10000)
+    </button>
+    </div>
+    
     <script src="main.js" charset="utf-8" type="text/javascript"></script>
-</body>
+  </body>
 </html>
