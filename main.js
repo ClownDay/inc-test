@@ -115,5 +115,6 @@ function tab(tab){
   document.getElementById("Past").style.display = "none"
   document.getElementById("Present").style.display = "none"
   document.getElementById("Future").style.display = "none"
+  document.getElementById("Tabs").style.display = "inline-block"
   document.getElementById(tab).style.display = "inline-block"
 }
